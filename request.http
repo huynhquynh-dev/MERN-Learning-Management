@@ -32,3 +32,28 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDZjM
     "url": "google.com",
     "status": "LEARNING" 
 }
+
+################################
+
+GET http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDZjMDcxZjU3ZDQ4MTAzMzAzMjA0ZmIiLCJpYXQiOjE2MTc2OTI0NDd9.jCvxloXvLH-MFV-w2wJi1gkykze6umy9UhZY9BlQ2Uw
+
+################################
+
+PUT http://localhost:5000/api/posts/606c074257d48103303204fc
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDZjMDcxZjU3ZDQ4MTAzMzAzMjA0ZmIiLCJpYXQiOjE2MTc2OTI0NDd9.jCvxloXvLH-MFV-w2wJi1gkykze6umy9UhZY9BlQ2Uw
+
+{
+    "title": "Anguler JS",
+    "description": "Học Anguler",
+    "url": "google.com",
+    "status": "LEARNED" 
+}
+
+################################
+
+DELETE  http://localhost:5000/api/posts/606c074257d48103303204fc
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDZjMDcxZjU3ZDQ4MTAzMzAzMjA0ZmIiLCJpYXQiOjE2MTc2OTI0NDd9.jCvxloXvLH-MFV-w2wJi1gkykze6umy9UhZY9BlQ2Uw
