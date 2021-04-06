@@ -6,7 +6,7 @@ POST http://localhost:5000/api/auth/register
 Content-Type: application/json
 
 {
-    "username": "lionhuynh",
+    "username": "lion",
     "password": "lionhuynh"
 }
 
@@ -24,9 +24,10 @@ Content-Type: application/json
 
 POST http://localhost:5000/api/posts
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDZjMDcxZjU3ZDQ4MTAzMzAzMjA0ZmIiLCJpYXQiOjE2MTc2OTI0NDd9.jCvxloXvLH-MFV-w2wJi1gkykze6umy9UhZY9BlQ2Uw
 
 {
-    "title": "React JS",
+    "title": "Anguler JS",
     "description": "Học react redux",
     "url": "google.com",
     "status": "LEARNING" 

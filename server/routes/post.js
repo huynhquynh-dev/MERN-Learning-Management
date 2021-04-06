@@ -1,7 +1,7 @@
 
 const express = require('express')
 const router = express.Router()
-// const verifyToken = require('../middleware/auth')
+const verifyToken = require('../middleware/auth')
 
 const Post = require('../models/Post')
 
@@ -23,7 +23,7 @@ const Post = require('../models/Post')
 // @route POST api/posts
 // @desc Create post
 // @access Private
-router.post('/', async (req, res) => {
+router.post('/', verifyToken, async (req, res) => {
 	const { title, description, url, status } = req.body
 
 	// Simple validation
@@ -38,7 +38,7 @@ router.post('/', async (req, res) => {
 			description,
 			url: (url.startsWith('https://') || url.startsWith('http://')) ? url : `https://${url}`,
 			status: status || 'TO LEARN',
-			user: '606bdc6088b469255ca11a56'
+			user: req.userId
 		})
 
 		await newPost.save()
