@@ -1,15 +1,28 @@
-import React from 'react'
-import LoginForm from '../components/auth/LoginForm'
-import RegisterForm from '../components/auth/RegisterForm'
+import React from "react";
+import LoginForm from "../components/auth/LoginForm";
+import RegisterForm from "../components/auth/RegisterForm";
 
-const Auth = ({authRouter}) => {
-    return (
-        <>
-            <h1>MERN Learning Management</h1>
-            { authRouter === 'login' && <LoginForm/> }
-            { authRouter === 'register' && <RegisterForm/> }
-        </>
-    )
-}
+const Auth = ({ authRouter }) => {
+  let body;
 
-export default Auth
+  body = (
+    <>
+      {authRouter === "login" && <LoginForm />}
+      {authRouter === "register" && <RegisterForm />}
+    </>
+  );
+
+  return (
+    <div className="landing">
+      <div className="dark-overlay">
+        <div className="landing-inner">
+          <h1>Learning Management</h1>
+          <h4>Keep track of what you are learning</h4>
+          {body}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Auth;
